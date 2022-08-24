@@ -113,6 +113,45 @@ class UITestCase {
 		assertTrue(pdpDetails.getText().contains("Artikelbeschreibung"));
 		
 	}
+	
+	@Test
+	void TestCase2() {
+		
+		CloseCookieBanner();
+		
+		//find Navigation Menu and click on Multimedia
+		WebElement NavigationMenu = driver.findElement(By.id("nav_menu"));
+		NavigationMenu.findElement(By.xpath("//span[.='Multimedia']")).click();
+
+		//wait until Multimedia Page opened and click on BluRayPlayer
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[.='Blu-ray-Player']")));
+		driver.findElement(By.xpath("//span[.='Blu-ray-Player']")).click();
+		
+		//wait until the search results are listed
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("find_tile__container")));
+		
+		//get the first product and click on it
+		driver.findElement(By.cssSelector("[data-qa=\"ftfind-product-1\"]")).click();
+		
+		//check if "Artikelbeschrischreibung" is part of the whole page
+		assertTrue(driver.getPageSource().contains("Artikelbeschreibung"));
+		
+		//check if "Artikelbeschrischreibung" is part of the detailView area
+		WebElement detailView = driver.findElement(By.id("detailviewWrapper"));
+		//System.out.println("detailviewWrapper: "+detailView.getText());
+		assertTrue(detailView.getText().contains("Artikelbeschreibung"));
+		
+		//check if "Artikelbeschrischreibung" is part of the prd detailsArea
+		WebElement prdDetailArea = driver.findElement(By.cssSelector("[data-qa=\"detailsArea\"]"));
+		//System.out.println("prdDetailArea: "+prdDetailArea.getText());
+		assertTrue(prdDetailArea.getText().contains("Artikelbeschreibung"));
+		
+		//check if "Artikelbeschrischreibung" is part of the prd details short info
+		WebElement pdpDetails = driver.findElement(By.className("prd_detailShortInfo__wrapper"));
+		//System.out.println("pdpDetails: "+pdpDetails.getText());
+		assertTrue(pdpDetails.getText().contains("Artikelbeschreibung"));
+		
+	}
 
 
 }
