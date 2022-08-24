@@ -1,6 +1,5 @@
 package UITest;
 
-import java.awt.RenderingHints.Key;
 import java.time.*;
 
 import org.openqa.selenium.By;
@@ -23,59 +22,66 @@ public class MainUITest {
 
 		try {
 			
+			//avoid implicit wait and use expicit waits
 			//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-			driver.get("https://www.otto.de/");
 			
-			
-			
+			//setup explicit wait
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			
+			driver.get("https://www.otto.de/");
 			String title = driver.getTitle();
-
 			System.out.println("Title: "+title);
 			
-			
+			//close Cookie Banner
 			WebElement CookieBanner = driver.findElement(By.id("cookieBanner"));
+			//System.out.println("CookieBanner: "+CookieBanner.getText());
 			CookieBanner.findElement(By.cssSelector("button")).click();
 
-			WebElement SearchJeans = driver.findElement(By.cssSelector("[data-qa-id=\"search-field\"]"));
 
+			//find search field and Type 
+			WebElement SearchJeans = driver.findElement(By.cssSelector("[data-qa-id=\"search-field\"]"));
 			//WebElement SearchJeans = new WebDriverWait(driver, Duration.ofSeconds(5))
 			//.until(driver.findElement(By.linkText("Wonach suchst du?")));
 
-			System.out.println("SearchResult: "+SearchJeans.getText());
-
 			SearchJeans.sendKeys("Jeans" + Keys.ENTER);
-			
-			System.out.println("SearchResult: "+SearchJeans.getText());
-			
+
+			//get the first product from the list
 			//class "product sponsored", data-list-position=1, data-local-list-position=1, class "find_tile__container
 			//WebElement firstResult = driver.findElement(By.cssSelector("[data-qa=\"ftfind-product-1\"]"));
 			//WebElement firstResult = driver.findElement(By.className("find_tile__container"));
 			//WebElement firstResult = driver.findElement(By.cssSelector("[data-list-position=\"1\"]"));
 			
+			//wait until the search results are listed
 			wait.until(ExpectedConditions.elementToBeClickable(By.className("find_tile__container")));
 			
+			//get the first product and click on it
 			driver.findElement(By.cssSelector("[data-qa=\"ftfind-product-1\"]")).click();
 			
+			//check if "Artikelbeschrischreibung" is part of the whole page
 			boolean found = driver.getPageSource().contains("Artikelbeschreibung");
-			System.out.println("Artikelbeschreibung "+found);
+			System.out.println("Artikelbeschreibung on Whole Page "+found);
 			
-			//class pl-block-pdp-details-short-info
+			//check if "Artikelbeschrischreibung" is part of the detailView area
 			WebElement detailView = driver.findElement(By.id("detailviewWrapper"));
-			System.out.println("detailviewWrapper: "+detailView.getText());
+			//System.out.println("detailviewWrapper: "+detailView.getText());
+			boolean foundDetailviewWrapper = detailView.getText().contains("Artikelbeschreibung");
+			System.out.println("Artikelbeschreibung on Whole Description Area"+foundDetailviewWrapper);
 			
-			WebElement pdpDetails = driver.findElement(By.className("pdp_details-short-info__wrapper"));
-			System.out.println("pdpDetails: "+pdpDetails.getText());
+			//check if "Artikelbeschrischreibung" is part of the prd detailsArea
+			WebElement prdDetailArea = driver.findElement(By.cssSelector("[data-qa=\"detailsArea\"]"));
+			//System.out.println("prdDetailArea: "+prdDetailArea.getText());
+			boolean foundPrdDetailArea = prdDetailArea.getText().contains("Artikelbeschreibung");
+			System.out.println("Artikelbeschreibung on Product Details"+foundPrdDetailArea);
 			
-			
-
-			
+			//check if "Artikelbeschrischreibung" is part of the prd details short info
+			WebElement pdpDetails = driver.findElement(By.className("prd_detailShortInfo__wrapper"));
+			//System.out.println("pdpDetails: "+pdpDetails.getText());
+			boolean foundPdpDetails = pdpDetails.getText().contains("Artikelbeschreibung");
+			System.out.println("Artikelbeschreibung on Products ShortInfo"+foundPdpDetails);
 			
 		}finally {
 
-			System.out.println("End!");
+			System.out.println("End Testcase 1!");
 			driver.quit();
 		}
 
