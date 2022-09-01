@@ -1,13 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="app/src/main/java"/>
-	<classpathentry kind="src" path="app/src/test/java"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+	<classpathentry kind="src" output="bin/main" path="src/main/java">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="bin/main" path="src/main/resources">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="bin/test" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle_scope" value="test"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="bin/test" path="src/test/resources">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle_scope" value="test"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17/">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-api-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-api-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-chrome-driver-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-chrome-driver-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-chromium-driver-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-chromium-driver-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v85-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v85-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v102-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v102-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v103-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v103-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v104-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v104-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-edge-driver-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-edge-driver-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-firefox-driver-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-firefox-driver-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-http-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-http-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-ie-driver-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-ie-driver-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-java-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-java-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-json-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-json-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-opera-driver-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-opera-driver-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-remote-driver-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-remote-driver-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-safari-driver-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-safari-driver-4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-support-4.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-support-4.4.0-sources.jar"/>
 	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/lib/async-http-client-2.12.3.jar"/>
 	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/lib/async-http-client-netty-utils-2.12.3.jar"/>
 	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/lib/auto-common-1.2.1.jar"/>
@@ -54,39 +112,5 @@
 	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/lib/opentelemetry-semconv-1.16.0-alpha.jar"/>
 	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/lib/reactive-streams-1.0.4.jar"/>
 	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/lib/slf4j-api-1.7.36.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-api-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-api-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-chrome-driver-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-chrome-driver-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-chromium-driver-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-chromium-driver-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v85-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v85-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v102-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v102-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v103-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v103-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v104-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-devtools-v104-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-edge-driver-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-edge-driver-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-firefox-driver-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-firefox-driver-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-http-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-http-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-ie-driver-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-ie-driver-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-java-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-java-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-json-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-json-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-opera-driver-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-opera-driver-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-remote-driver-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-remote-driver-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-safari-driver-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-safari-driver-4.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-support-4.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/chris/lib/selenium-java-4.4.0/selenium-support-4.4.0-sources.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="output" path="bin/default"/>
 </classpath>
