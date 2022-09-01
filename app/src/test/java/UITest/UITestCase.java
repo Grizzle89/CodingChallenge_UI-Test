@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 import java.time.*;
 
@@ -31,10 +33,10 @@ class UITestCase {
     	
     	//either using a Webdriver Manager 
     	//(possible enhancement for getting always the latest and greatest Driver)
-        //WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.firefoxdriver().setup();
     	
     	//setting up the Driver via fixed path -> quick and dirty solution for my system only
-    	System.setProperty("webdriver.gecko.driver","/home/chris/bin/SeleniumWebDriver/geckodriver");
+    	//System.setProperty("webdriver.gecko.driver","/home/chris/bin/SeleniumWebDriver/geckodriver");
     }
 
     @BeforeEach
@@ -103,12 +105,12 @@ class UITestCase {
 		assertTrue(detailView.getText().contains("Artikelbeschreibung"));
 		
 		//check if "Artikelbeschrischreibung" is part of the prd detailsArea
-		WebElement prdDetailArea = driver.findElement(By.cssSelector("[data-qa=\"detailsArea\"]"));
+		//WebElement prdDetailArea = driver.findElement(By.cssSelector("[data-qa=\"detailsArea\"]"));
 		//System.out.println("prdDetailArea: "+prdDetailArea.getText());
-		assertTrue(prdDetailArea.getText().contains("Artikelbeschreibung"));
+		//assertTrue(prdDetailArea.getText().contains("Artikelbeschreibung"));
 		
 		//check if "Artikelbeschrischreibung" is part of the prd details short info
-		WebElement pdpDetails = driver.findElement(By.className("prd_detailShortInfo__wrapper"));
+		WebElement pdpDetails = driver.findElement(By.className("pdp_details-short-info__wrapper"));
 		//System.out.println("pdpDetails: "+pdpDetails.getText());
 		assertTrue(pdpDetails.getText().contains("Artikelbeschreibung"));
 		
@@ -142,12 +144,12 @@ class UITestCase {
 		assertTrue(detailView.getText().contains("Artikelbeschreibung"));
 		
 		//check if "Artikelbeschrischreibung" is part of the prd detailsArea
-		WebElement prdDetailArea = driver.findElement(By.cssSelector("[data-qa=\"detailsArea\"]"));
+		//WebElement prdDetailArea = driver.findElement(By.cssSelector("[data-qa=\"detailsArea\"]"));
 		//System.out.println("prdDetailArea: "+prdDetailArea.getText());
-		assertTrue(prdDetailArea.getText().contains("Artikelbeschreibung"));
+		//assertTrue(prdDetailArea.getText().contains("Artikelbeschreibung"));
 		
 		//check if "Artikelbeschrischreibung" is part of the prd details short info
-		WebElement pdpDetails = driver.findElement(By.className("prd_detailShortInfo__wrapper"));
+		WebElement pdpDetails = driver.findElement(By.className("pdp_details-short-info__wrapper"));
 		//System.out.println("pdpDetails: "+pdpDetails.getText());
 		assertTrue(pdpDetails.getText().contains("Artikelbeschreibung"));
 		
