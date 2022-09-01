@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 import java.time.*;
 
@@ -31,10 +33,10 @@ class UITestCase {
     	
     	//either using a Webdriver Manager 
     	//(possible enhancement for getting always the latest and greatest Driver)
-        //WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.firefoxdriver().setup();
     	
     	//setting up the Driver via fixed path -> quick and dirty solution for my system only
-    	System.setProperty("webdriver.gecko.driver","/home/chris/bin/SeleniumWebDriver/geckodriver");
+    	//System.setProperty("webdriver.gecko.driver","/home/chris/bin/SeleniumWebDriver/geckodriver");
     }
 
     @BeforeEach
